@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/InfiniteLoop/static/css/main.c44d099f.chunk.css",
-    "main.js": "/InfiniteLoop/static/js/main.4e2556a5.chunk.js",
-    "main.js.map": "/InfiniteLoop/static/js/main.4e2556a5.chunk.js.map",
-    "runtime-main.js": "/InfiniteLoop/static/js/runtime-main.88f2ad78.js",
-    "runtime-main.js.map": "/InfiniteLoop/static/js/runtime-main.88f2ad78.js.map",
-    "static/js/2.98136b32.chunk.js": "/InfiniteLoop/static/js/2.98136b32.chunk.js",
-    "static/js/2.98136b32.chunk.js.map": "/InfiniteLoop/static/js/2.98136b32.chunk.js.map",
-    "static/js/3.4e9eab1c.chunk.js": "/InfiniteLoop/static/js/3.4e9eab1c.chunk.js",
-    "static/js/3.4e9eab1c.chunk.js.map": "/InfiniteLoop/static/js/3.4e9eab1c.chunk.js.map",
-    "index.html": "/InfiniteLoop/index.html",
-    "static/css/main.c44d099f.chunk.css.map": "/InfiniteLoop/static/css/main.c44d099f.chunk.css.map",
-    "static/js/2.98136b32.chunk.js.LICENSE.txt": "/InfiniteLoop/static/js/2.98136b32.chunk.js.LICENSE.txt",
-    "static/media/loginFormBG.112ec6e7.jpg": "/InfiniteLoop/static/media/loginFormBG.112ec6e7.jpg",
-    "static/media/logo.c71b331d.png": "/InfiniteLoop/static/media/logo.c71b331d.png",
-    "static/media/video.1f7d396a.mp4": "/InfiniteLoop/static/media/video.1f7d396a.mp4"
+    "main.css": "/infinite-loop/static/css/main.c44d099f.chunk.css",
+    "main.js": "/infinite-loop/static/js/main.081aa930.chunk.js",
+    "main.js.map": "/infinite-loop/static/js/main.081aa930.chunk.js.map",
+    "runtime-main.js": "/infinite-loop/static/js/runtime-main.00bb1098.js",
+    "runtime-main.js.map": "/infinite-loop/static/js/runtime-main.00bb1098.js.map",
+    "static/js/2.611bb9e8.chunk.js": "/infinite-loop/static/js/2.611bb9e8.chunk.js",
+    "static/js/2.611bb9e8.chunk.js.map": "/infinite-loop/static/js/2.611bb9e8.chunk.js.map",
+    "static/js/3.c4371fea.chunk.js": "/infinite-loop/static/js/3.c4371fea.chunk.js",
+    "static/js/3.c4371fea.chunk.js.map": "/infinite-loop/static/js/3.c4371fea.chunk.js.map",
+    "index.html": "/infinite-loop/index.html",
+    "static/css/main.c44d099f.chunk.css.map": "/infinite-loop/static/css/main.c44d099f.chunk.css.map",
+    "static/js/2.611bb9e8.chunk.js.LICENSE.txt": "/infinite-loop/static/js/2.611bb9e8.chunk.js.LICENSE.txt",
+    "static/media/loginFormBG.112ec6e7.jpg": "/infinite-loop/static/media/loginFormBG.112ec6e7.jpg",
+    "static/media/logo.c71b331d.png": "/infinite-loop/static/media/logo.c71b331d.png",
+    "static/media/video.1f7d396a.mp4": "/infinite-loop/static/media/video.1f7d396a.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.88f2ad78.js",
-    "static/js/2.98136b32.chunk.js",
+    "static/js/runtime-main.00bb1098.js",
+    "static/js/2.611bb9e8.chunk.js",
     "static/css/main.c44d099f.chunk.css",
-    "static/js/main.4e2556a5.chunk.js"
+    "static/js/main.081aa930.chunk.js"
   ]
 }
