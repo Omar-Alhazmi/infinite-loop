@@ -11,7 +11,7 @@ export default class App extends Component {
  
 render() {
   return (
-    <Router>
+    <Router basename="infinite-loop">
     <Switch>
       <Route path='/' component={Home} exact />
       <Route path='/SignIn' component={SignIn} exact />
