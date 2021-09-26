@@ -1,21 +1,29 @@
-import logo from './logo.svg';
+import React, {Component}from 'react';
 import './App.css';
-import './FrontDesign/sideBar.css'
-import Chart from './FrontDesign/Chart'
-import TrackPage from './FrontDesign/TrackPage';
-import TrackTable from './FrontDesign/TrackTable';
-import SideBar from './FrontDesign/SideBar';
-import Home from './FrontDesign/Home';
-import ManagmentPage from './FrontDesign/MangamentPage'
-function App() {
+import {HashRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './components/home/Home';
+import SignIn from './components/SignPages/SignIn'
+import SignUp from './components/SignPages/SignUp'
+import PrivateRoute from './components/SignPages/PrivateRoute'
+import StorageAdminHome from './components/StorageAdminHome/StAdminHome'
+import MangamentPage from './FrontDesign/MangamentPage'
+export default class App extends Component {
+ 
+render() {
   return (
-    <div className="App">
-        <Home />
-        {/* <TrackPage /> */}
-        <ManagmentPage />
-        {/* <LogOutPage /> */}
-    </div>
-  );
+    <Router>
+    <Switch>
+      <Route path='/' component={Home} exact />
+      <Route path='/SignIn' component={SignIn} exact />
+      <Route exact path='/SignUp'>
+            <SignUp />
+          </Route>
+      <PrivateRoute>
+      <StorageAdminHome />
+      <MangamentPage />
+      </PrivateRoute>
+    </Switch>
+    </Router>
+  )
 }
-
-export default App;
+};
