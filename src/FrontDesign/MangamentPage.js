@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Mangament from './Managment'
-import SideBar from './SideBar'
+import SideBar from '../components/StorageAdminHome/StAdminSideBar'
 
 export default class MangamentPage extends Component {
     render() {
