@@ -124,7 +124,7 @@ export default class SignUp extends Component {
                             value={CompanyName}
                             placeholder="CompanyName"
                             required="required" />
-                        <FormButton type="submit" onClick={e => this.handelSubmit(e)}>Login</FormButton>
+                        <FormButton type="submit" onClick={e => this.handelSubmit(e)}>SignUp</FormButton>
                     </FormBody>
                     <h5 className="LoginFormText"> <Link to={'SignIn'} className="LoginFormText"> Back To Login!</Link></h5>
                 </FormContainer>

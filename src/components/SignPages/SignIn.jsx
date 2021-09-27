@@ -61,10 +61,10 @@ export default class SignIn extends Component {
                                 title: ` Welcome  ${getInfo().data.FullName} `,
                                 showConfirmButton: false, timer: 1500
                             });
-                            history.push('/#/Home')
+                            history.push('/infinite-loop/#/Home')
                         } else if (jwt === "StorageAdmin") {
                             console.log(jwt);
-                            history.push("/#/Home");
+                            history.push("/infinite-loop/#/Home");
                             Swal.fire({
                                 icon: 'success',
                                 title: ` Welcome  ${getInfo().data.FullName} `,
