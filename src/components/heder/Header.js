@@ -4,6 +4,7 @@ import { IconContext } from 'react-icons';
 import * as MainHeader from './MainHeaderStyle'
 import { animateScroll as scroll } from 'react-scroll';
 import logo from '../../image/logo.png'
+
 const Navbar = ({ toggle }) => {
     const [scrollNav, setScroll] = useState(false);
     const navOnChange = () => {
@@ -22,51 +23,52 @@ const Navbar = ({ toggle }) => {
     };
     return (
         <>
-                <IconContext.Provider value={{ color: '#fff' }}>
-                    <MainHeader.Nav scrollNav={scrollNav}>
-                        <MainHeader.NavContainer>
-                            <MainHeader.NavLogo to='/' onClick={toggleHandler}><MainHeader.Image src={logo} alt="" /> </MainHeader.NavLogo>
-                            <MainHeader.ResponsiveIcon onClick={toggle}>
-                                <FaBars />
-                            </MainHeader.ResponsiveIcon>
-                            <MainHeader.NavMenu>
-                                <MainHeader.NavItem>
-                                    <MainHeader.NavLinks
-                                        to="About"
-                                        smooth={true}
-                                        duration={500}
-                                        spy={true}
-                                        exact={true.toString()}
-                                        offset={13}
-                                    >About</MainHeader.NavLinks>
-                                </MainHeader.NavItem>
-                                <MainHeader.NavItem>
-                                    <MainHeader.NavLinks
-                                        to="Plans"
-                                        smooth={true}
-                                        duration={500}
-                                        spy={true}
-                                        exact={true.toString()}
-                                        offset={13}
-                                    >Plans</MainHeader.NavLinks>
-                                </MainHeader.NavItem>
-                                <MainHeader.NavItem>
-                                    <MainHeader.NavLinks
-                                        to="SignUp"
-                                        smooth={true}
-                                        duration={500}
-                                        spy={true}
-                                        exact={true.toString()}
-                                        offset={13}
-                                    >Sign Up</MainHeader.NavLinks>
-                                </MainHeader.NavItem>
-                            </MainHeader.NavMenu>
-                            <MainHeader.NavButton>
-                                <MainHeader.NavButtonLink to="/SignIn">Sign In</MainHeader.NavButtonLink>
-                            </MainHeader.NavButton>
-                        </MainHeader.NavContainer>
-                    </MainHeader.Nav>
-                </IconContext.Provider>
+            <IconContext.Provider value={{ color: '#fff' }}>
+                <MainHeader.Nav scrollNav={scrollNav}>
+                    <MainHeader.NavContainer>
+                        <MainHeader.NavLogo to='/' onClick={toggleHandler}><MainHeader.Image src={logo} alt="" /> </MainHeader.NavLogo>
+                        <MainHeader.ResponsiveIcon onClick={toggle}>
+                            <FaBars />
+                        </MainHeader.ResponsiveIcon>
+                        <MainHeader.NavMenu>
+                            <MainHeader.NavItem>
+                                <MainHeader.NavLinks
+                                    to="About"
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact={true.toString()}
+                                    offset={13}
+                                >About</MainHeader.NavLinks>
+                            </MainHeader.NavItem>
+                            <MainHeader.NavItem>
+                                <MainHeader.NavLinks
+                                    to="Plans"
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact={true.toString()}
+                                    offset={13}
+                                >Plans</MainHeader.NavLinks>
+                            </MainHeader.NavItem>
+                            <MainHeader.NavItem>
+                                <MainHeader.NavSignUp
+                                    to="/SignUp"
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact={true.toString()}
+                                    offset={13}
+                                >SignUp</MainHeader.NavSignUp>
+                            </MainHeader.NavItem>
+                        
+                        </MainHeader.NavMenu>
+                        <MainHeader.NavButton>
+                            <MainHeader.NavButtonLink to="/SignIn">SignIn</MainHeader.NavButtonLink>
+                        </MainHeader.NavButton>
+                    </MainHeader.NavContainer>
+                </MainHeader.Nav>
+            </IconContext.Provider>
         </>
     )
 }

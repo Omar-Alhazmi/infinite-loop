@@ -1,6 +1,13 @@
 import apiURL from'./APIConfig';
 import axios from 'axios';
-
+import { checkStorage } from '../helperMethods';
+//================== Helper Method ============================||
+const config = {
+  headers: {}
+}
+if (checkStorage()) {
+  config.headers['Authorization'] = `Bearer ${checkStorage()}`
+}
 export const UserRegistration = req => {
     return axios({
       method: 'POST',
@@ -17,3 +24,23 @@ export const UserRegistration = req => {
       }
     })
   }
+
+  export const AddItemToStorage = (ItemData, storageId) => {
+    console.log(    parseInt(ItemData.ItemSize)
+    );
+    return axios({
+      method: 'post',
+      url: `${apiURL}api/add/new/item/${storageId}`,
+      data: {
+        ItemName: ItemData.ItemName,
+        ItemSize: parseInt(ItemData.ItemSize)
+      },
+      config
+    })
+  }
+  
+//=====================================
+
+export const getStorageById = (id) => {
+  return axios.get(`${apiURL}api/get/storage/by/${id}`);
+}

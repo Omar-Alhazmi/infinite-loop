@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 export const TableWrapper  = styled.div`
     margin: 10px 70px 70px;
+    display: grid;
+
+    align-content: center;
+
+    height: 100vh;
     // box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
     @media (max-width: 767px) {
         &:before{
         display: block;
-        text-align: right;
+        text-align: center;
         font-size: 11px;
         color: white;
         padding: 0 0 10px;
@@ -67,14 +72,14 @@ export const TableTh = styled.th`
         width: 120px;
         font-size: 13px;
         text-overflow: ellipsis;
-        text-align: right;
+        text-align: center;
         border-bottom: 1px solid #f7f7f9;
-        text-align: right;
+        text-align: center;
         border-bottom: 1px solid #f7f7f9;
 }
 `
 export const TableTd = styled.td`
-    text-align: right;
+text-align: center;
     padding: 8px;
     border-left: 1px solid #f8f8f8;
     font-size: 12px;

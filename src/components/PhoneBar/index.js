@@ -1,7 +1,7 @@
 import React from 'react';
 import * as PhoneBarElements from './PhoneBarElements';
 import { checkStorage } from '../helperMethods';
-const Sidebar = ({ isOpen, toggle }) => {
+const PhoneBar = ({ isOpen, toggle }) => {
    const logout = (e) => {
       localStorage.clear();
       window.location.reload(false);
@@ -13,8 +13,8 @@ const Sidebar = ({ isOpen, toggle }) => {
          </PhoneBarElements.Icon>
          <PhoneBarElements.SidebarWrapper>
             <PhoneBarElements.SidebarMenu>
-               <PhoneBarElements.SidebarLink to="/About" onClick={toggle} >About</PhoneBarElements.SidebarLink>
-               <PhoneBarElements.SidebarLink to="/Plans" onClick={toggle}>Plans</PhoneBarElements.SidebarLink>
+               <PhoneBarElements.SidebarLink to="About" onClick={toggle} >About</PhoneBarElements.SidebarLink>
+               <PhoneBarElements.SidebarLink to="Plans" onClick={toggle}>Plans</PhoneBarElements.SidebarLink>
             </PhoneBarElements.SidebarMenu>
             <PhoneBarElements.SideBtnWrap>
                {checkStorage() !== null ?
@@ -27,5 +27,5 @@ const Sidebar = ({ isOpen, toggle }) => {
       </PhoneBarElements.SidebarContainer>
    )
 }
-export default Sidebar
+export default PhoneBar
 

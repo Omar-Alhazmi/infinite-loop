@@ -65,6 +65,8 @@ text-align: center;
 justify-self:center;
 margin-right: -22px;
 grid-column: span 2 / 5;
+font-size: 1.9rem;
+
 
 @media screen and (max-width:760px){
     display:none;
@@ -85,6 +87,17 @@ cursor: pointer;
     border-bottom: 3px solid #dea169;
 }`;
 
+export const NavSignUp = styled(LRouter)`
+color: #dea169 ;
+display: flex;
+align-items: center;
+text-decoration: none;
+padding: 0 1rem;
+height: 100%;
+cursor: pointer;
+&.active{
+    border-bottom: 3px solid #dea169;
+}`;
 export const NavButton = styled.nav`
 display: flex;
 align-items: center;

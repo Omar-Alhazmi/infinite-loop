@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import StAdminSideBar from './StAdminSideBar'
+import StAdminSideBar from '../SorageCustomer/CustomerSideBar'
 import Chart from './Chart'
 
 export default class Home extends Component {

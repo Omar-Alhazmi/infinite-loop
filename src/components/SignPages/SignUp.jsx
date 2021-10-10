@@ -28,17 +28,17 @@ export default class SignUp extends Component {
     // Function to set data in ServiceDescription state
     addUser = User => {
         // Make an api call request to add a new user 
-        let checkValidation = true
-        const stateWithoutEducation = (({ Education, ...o }) => o)(User)
-        Object.entries(stateWithoutEducation).forEach(([key, value]) => {
-            if (value === "") {
-                return checkValidation = false;
-            }
-        })
-        if (checkValidation === false) {
-            Swal.fire({ icon: 'error', title: " Please Make Sure To Fill the Field Properl" });
-        }
-        else {
+        // let checkValidation = true
+        // const stateWithoutEducation = (({ Education, ...o }) => o)(User)
+        // Object.entries(stateWithoutEducation).forEach(([key, value]) => {
+        //     if (value === "") {
+        //         return checkValidation = false;
+        //     }
+        // })
+        // if (checkValidation === false) {
+        //     Swal.fire({ icon: 'error', title: " Please Make Sure To Fill the Field Properl" });
+        // }
+        // else {
             UserRegistration(User)
                 .then(response => {
                     console.log(response);
@@ -49,13 +49,13 @@ export default class SignUp extends Component {
                     }
                     else if (response.data.success === true) {
                         Swal.fire({ icon: 'success', title: "Please Check Your Email For Activation Message" });
-                    }
+                     }
                 })
                 .catch(error => {
                     Swal.fire({ icon: 'error', title:`Some think went wrong` });
                 });
         };
-    }
+    // }
 
     handelSubmit = e => {
         // set the object of new user data 
