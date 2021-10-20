@@ -13,9 +13,9 @@ export default class Plans extends Component {
 
     render() {
         return (
-            <SectionsStyled.InfoContainer>
+            <SectionsStyled.InfoContainer id='Plans'>
                 <SectionsStyled.InfoWrapper>
-                    <SectionsStyled.InfoRow >
+                    <SectionsStyled.CardRow >
                         <h2 className="heading-secondary">
                             Storing Plans
                         </h2>
@@ -107,7 +107,7 @@ export default class Plans extends Component {
                                 </div>
                             </div>
                         </SectionsStyled.PlanCardContainer>
-                    </SectionsStyled.InfoRow>
+                    </SectionsStyled.CardRow>
                 </SectionsStyled.InfoWrapper>
             </SectionsStyled.InfoContainer>
         )

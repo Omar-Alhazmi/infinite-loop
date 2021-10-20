@@ -51,21 +51,7 @@ const Navbar = ({ toggle }) => {
                                     offset={13}
                                 >Plans</MainHeader.NavLinks>
                             </MainHeader.NavItem>
-                            <MainHeader.NavItem>
-                                <MainHeader.NavSignUp
-                                    to="/SignUp"
-                                    smooth={true}
-                                    duration={500}
-                                    spy={true}
-                                    exact={true.toString()}
-                                    offset={13}
-                                >SignUp</MainHeader.NavSignUp>
-                            </MainHeader.NavItem>
-                        
-                        </MainHeader.NavMenu>
-                        <MainHeader.NavButton>
-                            <MainHeader.NavButtonLink to="/SignIn">SignIn</MainHeader.NavButtonLink>
-                        </MainHeader.NavButton>
+                         </MainHeader.NavMenu>
                     </MainHeader.NavContainer>
                 </MainHeader.Nav>
             </IconContext.Provider>

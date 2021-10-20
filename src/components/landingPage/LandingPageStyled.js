@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
+import { Link as LRouter } from 'react-router-dom'
 
 export const LandingPageContainer = styled.div`
 background: #0c0c0c;
@@ -97,6 +98,26 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
 margin-left: 8px;
 font-size: 20px;
 `
+export const LandingButton = styled(LRouter)`
+border-radius: 50px;
+background: ${({primary}) => (primary ? '#dea169' : '#DBE2EF')};
+white-space: nowrap;
+padding: ${({Large}) => (Large ? '14px 48px' : '12px 30px')};
+color: ${({dark}) => (dark ? '#010606' : '#fff')};
+font-size: ${({fontLarge}) => (fontLarge ? '20px' : '16px')};
+outline: none;
+border: none;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+text-decoration: none;
+transition: all 0.2s ease-in-out;
+&:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ primary }) => ( primary ? '#fff' : '#01BF71')};
+}
+`;
 
 
 

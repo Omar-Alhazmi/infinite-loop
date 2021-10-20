@@ -13,8 +13,6 @@ font-size: 0.97rem;
 position: sticky;
 top: 0;
 z-index: 10;
-
-
 @media screen and (max-width:960px){
      transition: 0.8s all ease;
 }`;
@@ -66,8 +64,6 @@ justify-self:center;
 margin-right: -22px;
 grid-column: span 2 / 5;
 font-size: 1.9rem;
-
-
 @media screen and (max-width:760px){
     display:none;
 }`;
@@ -81,7 +77,7 @@ display: flex;
 align-items: center;
 text-decoration: none;
 padding: 0 1rem;
-height: 100%;
+height: 80%;
 cursor: pointer;
 &.active{
     border-bottom: 3px solid #dea169;
@@ -102,7 +98,6 @@ export const NavButton = styled.nav`
 display: flex;
 align-items: center;
 justify-self:flex-end;
-
 @media screen and (max-width: 768px) {
     display: none;
 }`
@@ -118,7 +113,6 @@ border: none;
 cursor: pointer;
 transition: all 0.2s ease-in-out;
 text-decoration: none;
-
 &:hover {
     transition: all 0.1s ease-in-out;
     background: #282c34;

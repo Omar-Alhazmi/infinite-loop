@@ -143,6 +143,7 @@
     -webkit-perspective: 150rem;
             perspective: 150rem;
     -moz-perspective: 150rem;
+    margin: 10px 0;
     position: relative;
     height: 52rem;
   }

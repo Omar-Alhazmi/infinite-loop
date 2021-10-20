@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const InfoContainer = styled.div`
 color: #fff;
 background: ${({lightBg}) => (lightBg ? '#ffff' : '#282c34')};
-
 @media screen and (max-width: 768px) {
      padding: 100px 0;
 }
@@ -19,19 +18,11 @@ margin-right: auto;
 margin-left: auto;
 padding: 0 24px;
 justify-content: center;
-`;
-
-
-export const InfoRow = styled.div`
-    display: block;
-grid-auto-columns: minmax(auto, 1fr);
-align-items: center;
-grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )};
-
 @media screen and (max-width: 768px) {
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)}
+    height: fit-content;
 }
 `;
+
 export const AboutInfoRow = styled.div`
 display: grid;
 grid-auto-columns: minmax(auto, 1fr);
@@ -61,13 +52,12 @@ padding-bottom: 60px;
 
 export const TopLine = styled.p`
 color: #DEA169;
-font-size: 24px;
+font-size: 16px;
 line-height: 16px;
 font-weight: 700;
-text-align:center;
 letter-spacing: 1.4px;
 text-transform: uppercase;
-margin-bottom: 20px;
+margin-bottom: 16px;
 `;
 export const Input = styled.input`
   padding: 0.5em;
@@ -80,13 +70,10 @@ export const Input = styled.input`
 export const Heading = styled.p`
     color: #fff;
     margin-bottom: 24px;
-    font-size: 18px;
-    text-justify: inter-word;
-    color: #010606;
-    background-color: transparent;
-    border-style: none;
-    border-bottom: 1px solid #dea169;
-    color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
+font-size: 48px;
+line-height: 1.1;
+font-weight: 600;
+    color: ${({lightText}) => (lightText ? '#f7f8fa' : '#DEA169')};
 
 @media screen and (max-width : 480px) {
     font-size: 32px;
@@ -111,6 +98,7 @@ max-width: 440px;
 margin-bottom: 35px;
 font-size: 18px;
 line-height: 24px;
+border-bottom: 1px solid #dea169;
 color: ${({darkText}) => (darkText ? '#010606' : "#fff")};
 `;
 
@@ -134,4 +122,30 @@ export const PlanCardContainer = styled.div`
     grid-template-rows: 100px;
     margin: 3px;
     width: 100vw;
+    @media screen and (max-width : 768px) {
+        display: block;
+        max-width: 374px;
+
+    }
     `
+
+
+export const InfoRow = styled.div`
+display: grid;
+grid-auto-columns: minmax(auto, 1fr);
+align-items: center;
+grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )};
+
+@media screen and (max-width: 768px) {
+    grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)}
+}
+`;
+export const CardRow = styled.div`
+    display: block;
+grid-auto-columns: minmax(auto, 1fr);
+align-items: center;
+grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'` )};
+@media screen and (max-width: 768px) {
+    grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)}
+}
+`;

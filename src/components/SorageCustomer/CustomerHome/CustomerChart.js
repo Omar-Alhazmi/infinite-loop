@@ -27,7 +27,7 @@ export default class CustomerChart extends Component {
     render() {
         let InStorage = 0
         let EmptySpace = 100
-        if(this.state.Storage != null){
+        if(this.state.Storage != null && this.state.Storage.StorageCapacity !== undefined){
              InStorage = this.state.Storage.StorageArea 
              EmptySpace = this.state.Storage.StorageCapacity.TotalCapacity
         }

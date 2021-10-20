@@ -4,15 +4,15 @@ import AboutImage from '../../image/AboutImage.svg';
 export default class About extends Component {
     render() {
         return (
-            <SectionsStyled.InfoContainer lightBg>
+            <SectionsStyled.InfoContainer lightBg id='About'>
                 <SectionsStyled.InfoWrapper>
                     <SectionsStyled.AboutInfoRow >
                         <SectionsStyled.Column1>
                             <SectionsStyled.TextWrapper>
-                                <SectionsStyled.TopLine>
-                                    About Us
-                                </SectionsStyled.TopLine>
                                 <SectionsStyled.Heading>
+                                    About Us
+                                </SectionsStyled.Heading>
+                                <SectionsStyled.Subtitle darkText>
                                     Through our storing  solutions,
                                     we help e-commerce platforms and their customers reach their goals
                                     by delivering the necessary logistics services. 
@@ -20,7 +20,7 @@ export default class About extends Component {
                                     by delivering the best possible service.
                                     Through our technology and processes, 
                                     we can provide our clients with a better and faster order processing process.
-                                </SectionsStyled.Heading>
+                                </SectionsStyled.Subtitle>
                             </SectionsStyled.TextWrapper>
                         </SectionsStyled.Column1>
                         <SectionsStyled.Column2>
