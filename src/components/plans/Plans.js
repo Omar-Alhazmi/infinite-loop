@@ -13,7 +13,7 @@ export default class Plans extends Component {
 
     render() {
         return (
-            <SectionsStyled.InfoContainer id='Plans'>
+            <SectionsStyled.PlanContainer id='Plans'>
                 <SectionsStyled.InfoWrapper>
                     <SectionsStyled.CardRow >
                         <h2 className="heading-secondary">
@@ -109,7 +109,7 @@ export default class Plans extends Component {
                         </SectionsStyled.PlanCardContainer>
                     </SectionsStyled.CardRow>
                 </SectionsStyled.InfoWrapper>
-            </SectionsStyled.InfoContainer>
+            </SectionsStyled.PlanContainer>
         )
     }
 }
