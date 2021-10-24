@@ -113,3 +113,7 @@ export const TableTr = styled.tr`
     }
     }
 `
+export const IconContainer = styled.div`
+display:flex;
+ justify-content: space-between;
+`

@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
-import * as StyledTable from './styledTabled'
-import { getStorageById, AddItemToStorage } from '../api_config/api';
+import * as StyledTable from '../SorageCustomer/styledTabled'
+import {  AddItemToStorage,getAllCustomer } from '../api_config/api';
 import { getInfo } from '../helperMethods';
 import { CgAdd } from "react-icons/cg";
-// import { FcShipped } from "react-icons/fc";
 
 import Swal from "sweetalert2";
 import AddItem from '../addItemForm/AddItem'
-export default class Management extends Component {
+export default class CustomerStatuses extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            Storage: null,
+            Customers: [],
             addItem: false,
             Item: [],
             ItemData: {
@@ -23,11 +22,10 @@ export default class Management extends Component {
 
     componentDidMount() {
         //API call 
-        getStorageById(getInfo().data.StorageId)
+        getAllCustomer()
             .then((response) => {
                 this.setState({
-                    Storage: response.data,
-                    Item: response.data.Items
+                    Customers: response.data,
                 });
             })
             .catch((error) => {
@@ -57,15 +55,16 @@ export default class Management extends Component {
         this.setState({ addItem: !this.state.addItem })
     }
     render() {
-        let storageData = <div class="spinner">Loading...</div>
-        if (this.state.Item.length > 0) {
-            storageData = this.state.Item.map((item, index) => {
+        let CustomersData = <div class="spinner">Loading...</div>
+        if (this.state.Customers.length > 0) {
+            CustomersData = this.state.Customers.map((Customer, index) => {
                 return (
-                    <StyledTable.TableBodyContainer id={item._id} key={index}>
+                    <StyledTable.TableBodyContainer id={Customer._id} key={index}>
                         <StyledTable.TableTr> 
-                            <StyledTable.TableTd>{item._id.slice(-6,-1).toUpperCase()}</StyledTable.TableTd>
-                            <StyledTable.TableTd>{item.ItemName}</StyledTable.TableTd>
-                            <StyledTable.TableTd>{item.ItemSize}</StyledTable.TableTd>
+                            <StyledTable.TableTd>{Customer.FullName}</StyledTable.TableTd>
+                            <StyledTable.TableTd>{Customer.CompanyName}</StyledTable.TableTd>
+                            <StyledTable.TableTd>{Customer.Email}</StyledTable.TableTd>
+                            <StyledTable.TableTd>{Customer.Phone}</StyledTable.TableTd>
                         </StyledTable.TableTr>
                     </StyledTable.TableBodyContainer>
                 )
@@ -80,18 +79,21 @@ export default class Management extends Component {
                     :
                     <>
                     <StyledTable.IconContainer>
-                        <CgAdd onClick={e => this.addItemHandler(e)}size={50} color={"#5eba7e"} />
+                        <CgAdd 
+                        // onClick={e => this.addItemHandler(e)}
+                        size={50} color={"#5eba7e"} />
                         {/* <FcShipped size={50}/> */}
                         </StyledTable.IconContainer>
                      <StyledTable.TableContainer>
                         <StyledTable.TableHedContainer>
                             <tr>
-                                <StyledTable.TableTh className="tableHeader">SKU</StyledTable.TableTh>
-                                <StyledTable.TableTh className="tableHeader">Item Name</StyledTable.TableTh>
-                                <StyledTable.TableTh className="tableHeader">Item Size</StyledTable.TableTh>
+                                <StyledTable.TableTh className="tableHeader">Customer Name</StyledTable.TableTh>
+                                <StyledTable.TableTh className="tableHeader">CompanyName</StyledTable.TableTh>
+                                <StyledTable.TableTh className="tableHeader">Email</StyledTable.TableTh>
+                                <StyledTable.TableTh className="tableHeader">Phone</StyledTable.TableTh>
                             </tr>
                         </StyledTable.TableHedContainer>
-                        {storageData}
+                        {CustomersData}
                     </StyledTable.TableContainer>
                     </>
                 }

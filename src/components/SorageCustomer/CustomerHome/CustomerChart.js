@@ -52,7 +52,6 @@ export default class CustomerChart extends Component {
          ],
      };
      return (
-
              <div className="chartBar">                 
                  <ChartContainer>
                      <div>

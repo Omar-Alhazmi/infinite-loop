@@ -17,7 +17,7 @@ export default class Plans extends Component {
                 <SectionsStyled.InfoWrapper>
                     <SectionsStyled.CardRow >
                         <h2 className="heading-secondary">
-                            Storing Plans
+                            Storage Plans
                         </h2>
                         <SectionsStyled.PlanCardContainer>
                             <div className="col-1-of-3">

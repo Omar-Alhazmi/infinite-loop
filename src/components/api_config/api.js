@@ -44,3 +44,9 @@ export const UserRegistration = req => {
 export const getStorageById = (id) => {
   return axios.get(`${apiURL}api/get/storage/by/${id}`);
 }
+export const getAllCustomer = () => {
+  return axios.get(`${apiURL}api/get/all/user/Customer`);
+}
+export const getAllStorageCapacity = () => {
+  return axios.get(`${apiURL}api/get/GeneralCapacity`);
+}

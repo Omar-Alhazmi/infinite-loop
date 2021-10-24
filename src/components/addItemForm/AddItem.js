@@ -7,7 +7,7 @@ export default class AddItem extends Component {
 		const { ItemSize,ItemName } = this.props.data
 		return (
 			<>
-				<CgArrowLeftO onClick={this.props.toggleHandler} size={50} color={"#F9A826"} />
+				<CgArrowLeftO onClick={this.props.addItemHandler} size={50} color={"#F9A826"} />
 
 				<div class="container">
 					<div class="addItemCard">

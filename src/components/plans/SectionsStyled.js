@@ -4,7 +4,6 @@ export const InfoContainer = styled.div`
 color: #fff;
 z-index:1;
 position: relative;
-
 background: ${({lightBg}) => (lightBg ? '#ffff' : '#282c34')};
 @media screen and (max-width: 768px) {
      padding: 100px 0;
@@ -15,6 +14,7 @@ color: #fff;
 z-index:1;
 position: relative;
 margin-bottom: 350px;
+box-shadow: 0px 0px 40px rgb(0 0 0 / 80%);
 
 background: ${({lightBg}) => (lightBg ? '#ffff' : '#282c34')};
 @media screen and (max-width: 768px) {

@@ -5,7 +5,7 @@ import Home from './home/Home';
 import SignIn from './components/SignPages/SignIn'
 import SignUp from './components/SignPages/SignUp'
 import PrivateRoute from './components/SignPages/PrivateRoute'
-import StorageAdminHome from './components/StorageAdminHome/StAdminHome'
+import StorageAdminHome from './components/StorageAdminHome/RouteHandling'
 import MangamentPage from './components/SorageCustomer/MangamentPage'
 export default class App extends Component {
  
