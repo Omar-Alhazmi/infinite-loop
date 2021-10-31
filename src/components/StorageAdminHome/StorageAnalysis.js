@@ -22,14 +22,15 @@ export default class StorageAnalysis extends Component {
             .catch((error) => {
             })
 
-    }
+    }GeneralCapacity
         render() {
+            const {Storage}  = this.state
             let InStorage = 0
             let EmptySpace = 6000
-            if(this.state.Storage != null){
-                EmptySpace = this.state.Storage[0].TotalCapacity 
+            let  newEmptySpace
+            if(Storage != null){
+                InStorage = Storage[0].TotalCapacity 
             }
-            InStorage = 6000 - EmptySpace         
          const StorageData = {
              labels: [`In Storage : ${InStorage}`
                  , `Empty Space: ${EmptySpace}`],

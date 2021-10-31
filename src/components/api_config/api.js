@@ -26,14 +26,14 @@ export const UserRegistration = req => {
   }
 
   export const AddItemToStorage = (ItemData, storageId) => {
-    console.log(    parseInt(ItemData.ItemSize)
-    );
+    console.log(parseInt(ItemData.ItemSize));
     return axios({
       method: 'post',
       url: `${apiURL}api/add/new/item/${storageId}`,
       data: {
         ItemName: ItemData.ItemName,
-        ItemSize: parseInt(ItemData.ItemSize)
+        ItemSize: parseFloat(ItemData.ItemSize),
+        Quantity: parseInt(ItemData.Quantity)
       },
       config
     })

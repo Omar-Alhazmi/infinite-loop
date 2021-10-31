@@ -4,7 +4,7 @@ import { CgArrowLeftO } from "react-icons/cg";
 import add2 from '../../image/add2.svg'
 export default class AddItem extends Component {
 	render() {
-		const { ItemSize,ItemName } = this.props.data
+		const { ItemSize,ItemName,Quantity } = this.props.data
 		return (
 			<>
 				<CgArrowLeftO onClick={this.props.addItemHandler} size={50} color={"#F9A826"} />
@@ -41,6 +41,17 @@ export default class AddItem extends Component {
 									value={ItemSize}
 									 />
 								<label class="input-label">Size</label>
+							</div>
+							<div class="input">
+								<input
+									class="input-field"
+									type="number"
+									required
+									name="Quantity"
+									onChange={this.props.onNameChange}
+									value={Quantity}
+									 />
+								<label class="input-label">Quantity</label>
 							</div>
 							<div class="action">
 								<button className="action-button" onClick={this.props.onFormSubmit} >Add Item</button>

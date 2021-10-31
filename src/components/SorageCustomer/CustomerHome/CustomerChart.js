@@ -16,6 +16,7 @@ export default class CustomerChart extends Component {
         //API call 
         getStorageById(getInfo().data.StorageId)
             .then((response) => {
+                console.log(response.data);
                 this.setState({
                     Storage: response.data
                 });
@@ -26,10 +27,10 @@ export default class CustomerChart extends Component {
     }
     render() {
         let InStorage = 0
-        let EmptySpace = 100
-        if(this.state.Storage != null && this.state.Storage.StorageCapacity !== undefined){
-             InStorage = this.state.Storage.StorageArea 
-             EmptySpace = this.state.Storage.StorageCapacity.TotalCapacity
+        let EmptySpace = 6000
+        const {Storage}  = this.state
+        if(Storage != null){
+             InStorage = Storage.Storage.StorageArea 
         }
      const StorageData = {
          labels: [`In Storage : ${InStorage}`

@@ -16,7 +16,8 @@ export default class Management extends Component {
             Item: [],
             ItemData: {
                 ItemName: "",
-                ItemSize: 0
+                ItemSize: 0,
+                Quantity:0
             }
         };
     }
@@ -25,9 +26,10 @@ export default class Management extends Component {
         //API call 
         getStorageById(getInfo().data.StorageId)
             .then((response) => {
+                console.log(response.data.Storage.Items);
                 this.setState({
                     Storage: response.data,
-                    Item: response.data.Items
+                    Item: response.data.Storage.Items
                 });
             })
             .catch((error) => {
@@ -35,6 +37,7 @@ export default class Management extends Component {
 
     }
     addItem = (newItem) => {
+
         AddItemToStorage(newItem,getInfo().data.StorageId)
             .then(response => {
                 console.log(response);
@@ -58,6 +61,7 @@ export default class Management extends Component {
     }
     render() {
         let storageData = <div class="spinner">Loading...</div>
+        if (this.state.Item) {
         if (this.state.Item.length > 0) {
             storageData = this.state.Item.map((item, index) => {
                 return (
@@ -66,11 +70,13 @@ export default class Management extends Component {
                             <StyledTable.TableTd>{item._id.slice(-6,-1).toUpperCase()}</StyledTable.TableTd>
                             <StyledTable.TableTd>{item.ItemName}</StyledTable.TableTd>
                             <StyledTable.TableTd>{item.ItemSize}</StyledTable.TableTd>
+                            <StyledTable.TableTd>{item.Quantity}</StyledTable.TableTd>
                         </StyledTable.TableTr>
                     </StyledTable.TableBodyContainer>
                 )
             })
         }
+    }
         const {addItem,ItemData}=this.state
         return (
             <StyledTable.TableWrapper>
@@ -89,6 +95,8 @@ export default class Management extends Component {
                                 <StyledTable.TableTh className="tableHeader">SKU</StyledTable.TableTh>
                                 <StyledTable.TableTh className="tableHeader">Item Name</StyledTable.TableTh>
                                 <StyledTable.TableTh className="tableHeader">Item Size</StyledTable.TableTh>
+                                <StyledTable.TableTh className="tableHeader">Item Quantity</StyledTable.TableTh>
+
                             </tr>
                         </StyledTable.TableHedContainer>
                         {storageData}
