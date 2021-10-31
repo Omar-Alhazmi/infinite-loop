@@ -27,7 +27,6 @@ export default class StorageAnalysis extends Component {
             const {Storage}  = this.state
             let InStorage = 0
             let EmptySpace = 6000
-            let  newEmptySpace
             if(Storage != null){
                 InStorage = Storage[0].TotalCapacity 
             }
