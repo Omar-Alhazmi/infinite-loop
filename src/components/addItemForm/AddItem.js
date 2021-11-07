@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './AddItem.css'
+import '../styles/AddItem.css'
 import { CgArrowLeftO } from "react-icons/cg";
 import add2 from '../../image/add2.svg'
 export default class AddItem extends Component {

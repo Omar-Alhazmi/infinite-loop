@@ -103,6 +103,10 @@ text-align: center;
         display: block;
     }
 `
+export const ShippingQuantity = styled.input`
+    width: 56px;
+    border-style: unset;
+`
 export const TableTr = styled.tr`
 &:nth-child(even) {
     background: #F8F8F8;
