@@ -14,7 +14,7 @@ logout=(e)=>{
 
             <ul>
               <li ><Link to={'/StorageAnalysis'}>Storage Analysis</Link></li>
-              <li><Link to={'/Home'}>Tracking Packages</Link></li>
+              <li><Link to={'/Storages'}>Storages</Link></li>
               <li><Link to={'/CustomerStatuses'}>CustomerStatuses</Link></li>
               <li onClick={e=>this.logout(e)}><Link  to={'/'}>Log out</Link></li>
             </ul>

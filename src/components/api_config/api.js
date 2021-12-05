@@ -8,6 +8,7 @@ const config = {
 if (checkStorage()) {
   config.headers['Authorization'] = `Bearer ${checkStorage()}`
 }
+//============================================//
 export const UserRegistration = req => {
   return axios({
     method: 'POST',
@@ -24,7 +25,6 @@ export const UserRegistration = req => {
     }
   })
 }
-
 export const AddItemToStorage = (ItemData, storageId) => {
   return axios({
     method: 'post',
@@ -61,4 +61,7 @@ export const getAllCustomer = () => {
 }
 export const getAllStorageCapacity = () => {
   return axios.get(`${apiURL}api/get/GeneralCapacity`);
+}
+export const getAllStorages= () => {
+  return axios.get(`${apiURL}api/all/storage`,config);
 }
